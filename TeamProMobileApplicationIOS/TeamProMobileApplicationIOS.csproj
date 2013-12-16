@@ -1,0 +1,221 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">iPhoneSimulator</Platform>
+    <ProductVersion>10.0.0</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{5B4DB7D6-B5B5-4D7E-BB9C-2F17AB7F087E}</ProjectGuid>
+    <ProjectTypeGuids>{6BC8ED88-2882-458C-8E55-DFD12B67127B};{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}</ProjectTypeGuids>
+    <OutputType>Exe</OutputType>
+    <RootNamespace>TeamProMobileApplicationIOS</RootNamespace>
+    <IPhoneResourcePrefix>Resources</IPhoneResourcePrefix>
+    <AssemblyName>TeamProMobileApplicationIOS</AssemblyName>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|iPhoneSimulator' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\iPhoneSimulator\Debug</OutputPath>
+    <DefineConstants>DEBUG;</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <ConsolePause>false</ConsolePause>
+    <MtouchLink>None</MtouchLink>
+    <CodesignEntitlements>Entitlements.plist</CodesignEntitlements>
+    <MtouchDebug>true</MtouchDebug>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|iPhoneSimulator' ">
+    <DebugType>full</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\iPhoneSimulator\Release</OutputPath>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <MtouchLink>None</MtouchLink>
+    <ConsolePause>false</ConsolePause>
+    <CodesignEntitlements>Entitlements.plist</CodesignEntitlements>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|iPhone' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\iPhone\Debug</OutputPath>
+    <DefineConstants>DEBUG;</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <ConsolePause>false</ConsolePause>
+    <CodesignEntitlements>Entitlements.plist</CodesignEntitlements>
+    <MtouchDebug>true</MtouchDebug>
+    <CodesignKey>iPhone Developer</CodesignKey>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|iPhone' ">
+    <DebugType>full</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\iPhone\Release</OutputPath>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <CodesignEntitlements>Entitlements.plist</CodesignEntitlements>
+    <ConsolePause>false</ConsolePause>
+    <CodesignKey>iPhone Developer</CodesignKey>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Ad-Hoc|iPhone' ">
+    <DebugType>full</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\iPhone\Ad-Hoc</OutputPath>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <ConsolePause>false</ConsolePause>
+    <CodesignEntitlements>Entitlements.plist</CodesignEntitlements>
+    <BuildIpa>true</BuildIpa>
+    <CodesignProvision>Automatic:AdHoc</CodesignProvision>
+    <CodesignKey>iPhone Distribution</CodesignKey>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'AppStore|iPhone' ">
+    <DebugType>full</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\iPhone\AppStore</OutputPath>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <CodesignKey>iPhone Distribution</CodesignKey>
+    <CodesignEntitlements>Entitlements.plist</CodesignEntitlements>
+    <ConsolePause>false</ConsolePause>
+    <CodesignProvision>Automatic:AppStore</CodesignProvision>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="System" />
+    <Reference Include="System.Xml" />
+    <Reference Include="System.Core" />
+    <Reference Include="monotouch" />
+    <Reference Include="MonoTouch.Dialog-1" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="Resources\" />
+    <Folder Include="Internals\" />
+    <Folder Include="Model\" />
+    <Folder Include="Properties\" />
+    <Folder Include="Screens\" />
+    <Folder Include="ViewModel\" />
+    <Folder Include="Views\" />
+    <Folder Include="Resources\report\" />
+    <Folder Include="Resources\menu\" />
+    <Folder Include="Views\ReportListView\" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Info.plist" />
+    <None Include="Entitlements.plist" />
+    <None Include="Screens\.DS_Store" />
+    <None Include="MyAppViewController.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Main.cs" />
+    <Compile Include="AppDelegate.cs" />
+    <Compile Include="Internals\ColorStatusMode.cs" />
+    <Compile Include="Internals\DataFactory.cs" />
+    <Compile Include="Internals\EnumHelper.cs" />
+    <Compile Include="Internals\InternalsMethods.cs" />
+    <Compile Include="Internals\NameAttribute.cs" />
+    <Compile Include="Internals\OnlineDataManager.cs" />
+    <Compile Include="Internals\ProjectArrtibutes.cs" />
+    <Compile Include="Internals\ReportAttributes.cs" />
+    <Compile Include="Internals\SortedObservableCollection.cs" />
+    <Compile Include="Internals\StatusOkDescription.cs" />
+    <Compile Include="Internals\StatusOkMode.cs" />
+    <Compile Include="Internals\Statuses.cs" />
+    <Compile Include="Internals\StubDataManager.cs" />
+    <Compile Include="Internals\Contacts\ContactsManagerBase.cs" />
+    <Compile Include="Internals\TeamproServerEntitiesCache\CacheManager.cs" />
+    <Compile Include="Internals\TeamproServerEntitiesCache\TeamproCache.cs" />
+    <Compile Include="Internals\TeamproServerEntityHandlers\TeamproServerContactsHandler.cs" />
+    <Compile Include="Internals\TeamproServerEntityHandlers\TeamproServerHandlerBase.cs" />
+    <Compile Include="Internals\TeamproServerEntityHandlers\TeamproServerProjectsHandler.cs" />
+    <Compile Include="Internals\TeamproServerEntityHandlers\TeamproServerReportsHandler.cs" />
+    <Compile Include="Model\DailyReports.cs" />
+    <Compile Include="Model\IssueManager.cs" />
+    <Compile Include="Model\IssueNumber.cs" />
+    <Compile Include="Model\Person.cs" />
+    <Compile Include="Model\PersonGroup.cs" />
+    <Compile Include="Model\PersonListItemGroup.cs" />
+    <Compile Include="Model\Project.cs" />
+    <Compile Include="Model\Report.cs" />
+    <Compile Include="Model\TabItemModel.cs" />
+    <Compile Include="Model\TreeNode.cs" />
+    <Compile Include="Model\UserContext.cs" />
+    <Compile Include="Properties\Annotations.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Screens\MainReportsListScreen.cs" />
+    <Compile Include="Screens\MainReportsListScreen.designer.cs" />
+    <Compile Include="Screens\ReportScreen.cs" />
+    <Compile Include="Screens\ReportScreen.designer.cs" />
+    <Compile Include="Screens\SettingsScreen.cs" />
+    <Compile Include="Screens\SettingsScreen.designer.cs" />
+    <Compile Include="ViewModel\DailyMonthlyViewModel.cs" />
+    <Compile Include="Views\ReportMainFieldsView.cs" />
+    <Compile Include="Views\TabItemView.cs" />
+    <Compile Include="Screens\Navigation\FlyoutNavigationController.cs" />
+    <Compile Include="Screens\Navigation\OpenMenuGestureRecognizer.cs" />
+    <Compile Include="Settings.cs" />
+    <Compile Include="Screens\LoginScreen.cs" />
+    <Compile Include="Screens\LoginScreen.designer.cs">
+      <DependentUpon>LoginScreen.cs</DependentUpon>
+    </Compile>
+    <Compile Include="MainViewController.cs" />
+    <Compile Include="MainViewController.designer.cs">
+      <DependentUpon>MainViewController.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Screens\AddNewReportScreen.cs" />
+    <Compile Include="Screens\AddNewReportScreen.designer.cs">
+      <DependentUpon>AddNewReportScreen.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Views\RectangleControl.cs" />
+    <Compile Include="Views\RoundControl.cs" />
+    <Compile Include="Views\ReportListView\ReportCell.cs" />
+    <Compile Include="Views\ReportListView\ReportCell.designer.cs" />
+    <Compile Include="Views\ReportListView\TableSource.cs" />
+    <Compile Include="Views\ReportListView\HeaderGroupView.cs" />
+    <Compile Include="Views\ColorHelper.cs" />
+    <Compile Include="App.cs" />
+    <Compile Include="Screens\ViewReportScreen.cs" />
+    <Compile Include="Screens\ViewReportScreen.designer.cs">
+      <DependentUpon>ViewReportScreen.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ViewModel\EditReportViewModel.cs" />
+    <Compile Include="DispatchAdapter.cs" />
+    <Compile Include="Views\ToolsNavigationMenuView.cs" />
+    <Compile Include="Views\ToolsNavigationMenuItem.cs" />
+    <Compile Include="Views\ReportListView\MenuView.cs" />
+    <Compile Include="Views\ReportListView\ParrentMenuView.cs" />
+    <Compile Include="Views\ReportListView\TriangleControl.cs" />
+  </ItemGroup>
+  <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
+  <ItemGroup>
+    <InterfaceDefinition Include="Screens\MainReportsListScreen.xib" />
+    <InterfaceDefinition Include="Screens\ReportScreen.xib" />
+    <InterfaceDefinition Include="Screens\SettingsScreen.xib" />
+    <InterfaceDefinition Include="Screens\LoginScreen.xib" />
+    <InterfaceDefinition Include="Screens\AddNewReportScreen.xib" />
+    <InterfaceDefinition Include="Views\ReportListView\ReportCell.xib" />
+    <InterfaceDefinition Include="Screens\ViewReportScreen.xib" />
+  </ItemGroup>
+  <ItemGroup>
+    <BundleResource Include="Resources\report\bg.png" />
+    <BundleResource Include="Resources\report\long_tap_delete.png" />
+    <BundleResource Include="Resources\report\long_tap_dublicate.png" />
+    <BundleResource Include="Resources\report\long_tap_edit.png" />
+    <BundleResource Include="Resources\report\project_select_folder.png" />
+    <BundleResource Include="Resources\report\top_bar_back.png" />
+    <BundleResource Include="Resources\report\top_bar_delete.png" />
+    <BundleResource Include="Resources\report\top_bar_dublicate.png" />
+    <BundleResource Include="Resources\report\top_bar_edit.png" />
+    <BundleResource Include="Resources\report\top_bar_menu.png" />
+    <BundleResource Include="Resources\report\top_bar_new_report.png" />
+    <BundleResource Include="Resources\report\top_bar_submit.png" />
+    <BundleResource Include="Resources\menu\menu_contacts_normal.png" />
+    <BundleResource Include="Resources\menu\menu_contacts_selected.png" />
+    <BundleResource Include="Resources\menu\menu_logout_normal.png" />
+    <BundleResource Include="Resources\menu\menu_logout_selected.png" />
+    <BundleResource Include="Resources\menu\menu_reports_normal.png" />
+    <BundleResource Include="Resources\menu\menu_reports_selected.png" />
+    <BundleResource Include="Resources\menu\menu_settings_normal.png" />
+    <BundleResource Include="Resources\menu\menu_settings_selected.png" />
+  </ItemGroup>
+</Project>
